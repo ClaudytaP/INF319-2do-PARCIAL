@@ -1,0 +1,22 @@
+object CalcuScala {
+
+  def main(args: Array[String]) {
+
+    print(calcu(10, 2, "sumar"))
+  }
+
+  def sumar(x: Int, y: Int): Int = x + y
+  def restar(x: Int, y: Int): Int = x - y
+  def multiplicar(x: Int, y: Int): Int = x * y
+  def dividir(x: Int, y: Int): Int = x/y
+  
+  def calcu(x: Int, y: Int, operacion: String): Int = {
+    operacion match {
+      case "sumar"  => sumar(x, y)
+      case "restar" => restar(x, y)
+      case "multiplicar" => multiplicar(x, y)
+      case "dividir" => dividir(x,y)
+    }
+  }
+
+}
